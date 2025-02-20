@@ -82,10 +82,14 @@ ggplot(data=sleep_day, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + geom_point
 
 # Merging these two datasets #
 
-
 combined_data <- merge(sleep_day, daily_activity, by="Id")
 
 View(combined_data)
 
 # Take a look at how many participants are in this data set.
 n_distinct(combined_data$Id)
+
+[TotalSteps_SedentaryMinutes.pdf](https://github.com/user-attachments/files/18893270/TotalSteps_SedentaryMinutes.pdf)
+[TotMinAsleep_TotTimeInBed.pdf](https://github.com/user-attachments/files/18893273/TotMinAsleep_TotTimeInBed.pdf)
+
+
