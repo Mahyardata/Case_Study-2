@@ -1,5 +1,5 @@
 # Case_Study-2
-How-can-a-wellness-technology-company-play-it-smart
+# How-can-a-wellness-technology-company-play-it-smart
 
 
 ### Installing and loading common packages and libraries ###
@@ -68,15 +68,15 @@ sleep_day %>%
   summary()
 
 
-### Plotting a few explorations to get more information and more easily to understand #
+## Plotting a few explorations to get more information and more easily to understand #
 
 
-### What's the relationship between steps taken in a day and sedentary minutes? 
-### How could this help inform the customer segments that we can market to? 
+## What's the relationship between steps taken in a day and sedentary minutes? 
+## How could this help inform the customer segments that we can market to? 
 
 ggplot(data=daily_activity, aes(x=TotalSteps, y=SedentaryMinutes)) + geom_point()
 
-### What's the relationship between minutes asleep and time in bed? 
+## What's the relationship between minutes asleep and time in bed? 
 
 ggplot(data=sleep_day, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + geom_point()
 
