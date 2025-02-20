@@ -37,29 +37,29 @@ head(sleep_day)
 colnames(sleep_day)
 
 
-# Understanding some summary statistics #
+### Understanding some summary statistics #
 
 
-# How many unique participants are there in each data frame? 
+### How many unique participants are there in each data frame? 
 n_distinct(daily_activity$Id)
 
 n_distinct(sleep_day$Id)
 
-# How many observations are there in each data frame?
+### How many observations are there in each data frame?
 nrow(daily_activity)
 
 nrow(sleep_day)
 
-# What are some quick summary statistics we want to know about each data frame?
+### What are some quick summary statistics we want to know about each data frame?
 
-# For the daily activity data frame:
+### For the daily activity data frame:
 daily_activity %>%  
   select(TotalSteps,
          TotalDistance,
          SedentaryMinutes) %>%
   summary()
 
-# For the sleep day data frame:
+### For the sleep day data frame:
 
 sleep_day %>%  
   select(TotalSleepRecords,
@@ -68,25 +68,25 @@ sleep_day %>%
   summary()
 
 
-# Plotting a few explorations to get more information and more easily to understand #
+### Plotting a few explorations to get more information and more easily to understand #
 
 
-# What's the relationship between steps taken in a day and sedentary minutes? 
-# How could this help inform the customer segments that we can market to? 
+### What's the relationship between steps taken in a day and sedentary minutes? 
+### How could this help inform the customer segments that we can market to? 
 
 ggplot(data=daily_activity, aes(x=TotalSteps, y=SedentaryMinutes)) + geom_point()
 
-# What's the relationship between minutes asleep and time in bed? 
+### What's the relationship between minutes asleep and time in bed? 
 
 ggplot(data=sleep_day, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + geom_point()
 
-# Merging these two datasets #
+### Merging these two datasets #
 
 combined_data <- merge(sleep_day, daily_activity, by="Id")
 
 View(combined_data)
 
-# Take a look at how many participants are in this data set.
+### Take a look at how many participants are in this data set.
 n_distinct(combined_data$Id)
 
 
