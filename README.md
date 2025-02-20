@@ -2,7 +2,7 @@
 How-can-a-wellness-technology-company-play-it-smart
 
 ################################################
-## Installing and loading common packages and libraries ##
+# Installing and loading common packages and libraries #
 ################################################
 install.packages("tidyverse")
 library(tidyverse)
@@ -12,7 +12,7 @@ install.packages("ggplot2")
 library(ggplot2)
 
 #####################
-## Load the CSV files and make a data frame ##
+# Load the CSV files and make a data frame #
 #####################
 
 daily_activity <- read.csv("dailyActivity_merged.csv")
@@ -31,7 +31,7 @@ head(sleep_day)
 colnames(sleep_day)
 
 #####################################
-## Understanding some summary statistics ##
+# Understanding some summary statistics #
 #####################################
 
 # How many unique participants are there in each data frame? 
@@ -60,7 +60,7 @@ sleep_day %>%
   summary()
 
 ##########################
-## Plotting a few explorations to get more information and more easily to understand ##
+# Plotting a few explorations to get more information and more easily to understand #
 ##########################
 
 # What's the relationship between steps taken in a day and sedentary minutes? 
@@ -73,7 +73,7 @@ ggplot(data=daily_activity, aes(x=TotalSteps, y=SedentaryMinutes)) + geom_point(
 ggplot(data=sleep_day, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + geom_point()
 
 ##################################
-## Merging these two datasets ##
+# Merging these two datasets #
 ##################################
 
 combined_data <- merge(sleep_day, daily_activity, by="Id")
