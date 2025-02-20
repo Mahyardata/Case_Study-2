@@ -5,10 +5,15 @@ How-can-a-wellness-technology-company-play-it-smart
 # Installing and loading common packages and libraries #
 
 install.packages("tidyverse")
+
 library(tidyverse)
+
 install.packages("dplyr")
+
 library(dplyr)
+
 install.packages("ggplot2")
+
 library(ggplot2)
 
 
