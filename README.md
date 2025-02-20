@@ -2,7 +2,7 @@
 How-can-a-wellness-technology-company-play-it-smart
 
 
-##### Installing and loading common packages and libraries #####
+### Installing and loading common packages and libraries ###
 
 install.packages("tidyverse")
 
