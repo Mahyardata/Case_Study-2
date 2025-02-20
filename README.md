@@ -27,7 +27,7 @@ sleep_day <- read.csv("sleepDay_merged.csv")
 ### Take a look at the daily_activity data ###
 head(daily_activity)
 
-### Identify all the columns in the daily_activity data.###
+### Identify all the columns in the daily_activity data.
 colnames(daily_activity)
 
 ### Take a look at the sleep_day data.
