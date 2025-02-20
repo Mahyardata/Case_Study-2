@@ -2,7 +2,7 @@
 How-can-a-wellness-technology-company-play-it-smart
 
 
-### Installing and loading common packages and libraries ###
+##### Installing and loading common packages and libraries #####
 
 install.packages("tidyverse")
 
@@ -17,7 +17,7 @@ install.packages("ggplot2")
 library(ggplot2)
 
 
-# Load the CSV files and make a data frame #
+### Load the CSV files and make a data frame ###
 
 
 daily_activity <- read.csv("dailyActivity_merged.csv")
