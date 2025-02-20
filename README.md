@@ -21,6 +21,7 @@ library(ggplot2)
 
 
 daily_activity <- read.csv("dailyActivity_merged.csv")
+
 sleep_day <- read.csv("sleepDay_merged.csv")
 
 # Take a look at the daily_activity data.
@@ -41,10 +42,12 @@ colnames(sleep_day)
 
 # How many unique participants are there in each data frame? 
 n_distinct(daily_activity$Id)
+
 n_distinct(sleep_day$Id)
 
 # How many observations are there in each data frame?
 nrow(daily_activity)
+
 nrow(sleep_day)
 
 # What are some quick summary statistics we want to know about each data frame?
@@ -81,6 +84,7 @@ ggplot(data=sleep_day, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + geom_point
 
 
 combined_data <- merge(sleep_day, daily_activity, by="Id")
+
 View(combined_data)
 
 # Take a look at how many participants are in this data set.
